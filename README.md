@@ -1,3 +1,8 @@
 # NotWinning
-
-Program created by Khoa Le
+Group Members:
+Khoa Le
+Garrison Svay
+John Wang
+Matthew Chan
+Vaughn McCavey
+Eva Daniel
