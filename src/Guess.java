@@ -35,23 +35,25 @@ public void promptUser() {
 public String compareWords() {
 	String[] temp = new String[5];
 	for (int i = 0 ; i < word.length(); i++) {
-		
-		for (int j = 0 ; j < user.length(); j++) {
+		boolean check = true;
+		for (int j = i ; j < user.length() && check; j++) {
+			
+			if(user.charAt(j) == word.charAt(i) && i != j ) {
+				temp[j] = "#";
+				check = false;
+			}
 			
 			if(user.charAt(j) != word.charAt(i) && i == j){
 				temp[j] = "_";
+
 			}
+			
+			
 			
 			if (user.charAt(j) == word.charAt(i) && i == j) {
 				temp[j] = "*";
+				check = false;
 			}
-			
-			if(user.charAt(j) == word.charAt(i) && i != j) {
-				temp[j] = "#";
-			}
-			
-			
-			
 		}
 			
 	}
@@ -60,5 +62,4 @@ public String compareWords() {
 		tempWord += temp[i];
 	}
 	return tempWord;
-}
-}
+}}
