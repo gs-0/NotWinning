@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.Random;
 
-public class Guess {
+public class Driver {
 	private String word;
 	private String user;
 
@@ -25,4 +25,10 @@ public String takeWord() {
 		System.err.println(e.getMessage());
 	}
 	return "";
+}
+
+public void promptUser() {
+	Scanner stdIn = new Scanner(System.in);
+	System.out.print("Your Guess: ");
+	user = stdIn.nextLine();
 }
